@@ -7,6 +7,7 @@ const express = require('express')
 const hbs = require('hbs')
 
 const app = express()
+const port = process.env.PORT || 3000
 const publicdirpath = path.join(__dirname, '../public')
 const viewspath = path.join(__dirname, '../templates/views')
 const partialspath = path.join(__dirname, '../templates/partials')
@@ -95,6 +96,6 @@ app.get('*', (req, res)=>{
 
 })
 
-app.listen(3000, () =>{
+app.listen(port, () =>{
     console.log('Server is up!')
 })
