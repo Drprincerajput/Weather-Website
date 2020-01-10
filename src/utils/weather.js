@@ -12,7 +12,7 @@ const weather = (latitude, longtitude, callback) => {
             else{
                 let temp = body.currently.temperature
                 let chance = body.currently.precipProbability
-                callback(undefined, 'It is currently ' + temp + ' degrees out.There is a ' + chance + ' % chance of rain')
+                callback(undefined,body.daily.data[0].summary + 'It is currently ' + temp + ' degrees out.There is a ' + chance + ' % chance of rain')
             }
         }
 
